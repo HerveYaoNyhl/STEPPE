@@ -30,8 +30,7 @@ Ce projet fonctionne aussi bien sur **Linux** que sous **Termux (Android)**.
 sudo apt update && sudo apt install $(cat requirements.txt) -y
 
 ### Sous Termux :
-pkg install ffmpeg python wget tar findutils awk imagemagick -y
----
+pkg install ffmpeg python wget tar findutils awk imagemagick -y ---
 
 ## 🚀 Installation
 📦 Pour installation automatique :
