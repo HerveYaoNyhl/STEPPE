@@ -1,0 +1,8 @@
+ffmpeg
+python3
+wget
+tar
+findutils
+awk
+imagemagick
+iproute2
