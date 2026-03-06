@@ -155,7 +155,11 @@ handle_option() {
     2)
       echo -n "Numéro du flux (1-${#FILES[@]}) ▶ "
       read idx
-      [[ "$idx" =~ ^[0-9]+$ ]] && ffplay "rtsp://127.0.0.1:$RTSP_PORT/stream${idx}"
+      if [[ "$idx" =~ ^[0-9]+$ ]] && [ "$idx" -ge 1 ] && [ "$idx" -le "${#FILES[@]}" ]; then
+        ffplay "rtsp://127.0.0.1:$RTSP_PORT/stream${idx}"
+      else
+        echo "❌ Index invalide. Choisis un nombre entre 1 et ${#FILES[@]}."
+      fi
       ;;
     3)
       echo "🔁 Redémarrage portail HTML..."
